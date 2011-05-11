@@ -1,0 +1,47 @@
+<h1>New checklist</h1>
+
+<% form_for(@checklist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :studentID %><br />
+    <%= f.text_field :studentID %>
+  </p>
+  <p>
+    <%= f.label :courseCode %><br />
+    <%= f.text_field :courseCode %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= select :checklist, :year, options_for_select(Checklist::YEARS) %>
+  </p>
+  <p>
+    <%= f.label :semester %><br />
+    <%= select :checklist, :semester, options_for_select(Checklist::SEMESTERS) %>
+  </p>
+  <p>
+    <%= f.label :area %><br />
+    <%= select :checklist, :area, options_for_select(Checklist::AREAS) %>
+  </p>
+  <p>
+    <%= f.label :count %><br />
+    <%= select :checklist, :count, options_for_select(Checklist::COUNTS) %>
+  </p>
+  <p>
+    <%= f.label :grade %><br />
+    <%= select :checklist, :grade, options_for_select(Checklist::GRADES) %>
+  </p>
+  <p>
+    <%= f.label :approved %><br />
+    <%= select :checklist, :approved, options_for_select(Checklist::APPROVEDS) %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', checklists_path %>

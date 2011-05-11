@@ -1,0 +1,36 @@
+<h1>Checklists:</h1>
+
+<table>
+  <tr>
+    <th>Studentid</th>
+    <th>Coursecode</th>
+    <th>Year</th>
+    <th>Semester</th>
+    <th>Area</th>
+    <th>Count</th>
+    <th>Grade</th>
+    <th>Approved</th>
+    <th>Note</th>
+  </tr>
+
+<% @checklists.each do |checklist| %>
+  <tr>
+    <td><%=h checklist.studentID %></td>
+    <td><%=h checklist.courseCode %></td>
+    <td><%=h checklist.year %></td>
+    <td><%=h checklist.semester %></td>
+    <td><%=h checklist.area %></td>
+    <td><%=h checklist.count %></td>
+    <td><%=h checklist.grade %></td>
+    <td><%=h checklist.approved %></td>
+    <td><%=h checklist.note %></td>
+    <td><%= link_to 'Show', checklist %></td>
+    <td><%= link_to 'Edit', edit_checklist_path(checklist) %></td>
+    <td><%= link_to 'Destroy', checklist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New checklist', new_checklist_path %>

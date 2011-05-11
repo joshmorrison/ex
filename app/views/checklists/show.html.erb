@@ -1,0 +1,48 @@
+<p>
+  <b>Studentid:</b>
+  <%=h @checklist.studentID %>
+</p>
+
+<p>
+  <b>Coursecode:</b>
+  <%=h @checklist.courseCode %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%=h @checklist.year %>
+</p>
+
+<p>
+  <b>Semester:</b>
+  <%=h @checklist.semester %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%=h @checklist.area %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%=h @checklist.count %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%=h @checklist.grade %>
+</p>
+
+<p>
+  <b>Approved:</b>
+  <%=h @checklist.approved %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @checklist.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_checklist_path(@checklist) %> |
+<%= link_to 'Back', checklists_path %>

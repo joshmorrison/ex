@@ -1,0 +1,48 @@
+<h1>Editing checklist</h1>
+
+<% form_for(@checklist) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :studentID %><br />
+    <%= f.text_field :studentID %>
+  </p>
+  <p>
+    <%= f.label :courseCode %><br />
+    <%= f.text_field :courseCode %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :semester %><br />
+    <%= f.text_field :semester %>
+  </p>
+  <p>
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </p>
+  <p>
+    <%= f.label :count %><br />
+    <%= f.text_field :count %>
+  </p>
+  <p>
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade %>
+  </p>
+  <p>
+    <%= f.label :approved %><br />
+    <%= f.text_field :approved %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @checklist %> |
+<%= link_to 'Back', checklists_path %>

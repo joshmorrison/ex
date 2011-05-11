@@ -1,0 +1,91 @@
+<h1> Courses: </h1>
+<table>
+  <tr>
+    <th>Coursecode</th>
+    <th>Level</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+<% @courses.each do |course| %>
+  <tr>
+    <td><%=h course.courseCode %></td>
+    <td><%=h course.level %></td>
+    <td><%=h course.title %></td>
+    <td><%=h course.description %></td>
+    <td><%= link_to 'Show', course %></td>
+    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+    <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New course', new_course_path %>
+
+
+<br><br>
+
+Graduate Checklist / Advising Form (THESIS OPTION)<br><br>
+
+Note: At most <b>3</b> 4000 level courses count towards the
+degree requirement.<br><br>
+
+Note: The following 6000-level courses DO NOT count
+towards the degree requirements: CSCI 6001, 6090<br><br>
+
+CSCI 7000 (6 hours minimum)
+ Note: At most 6 hours of Thesis Research count towards the degree requirements<br><br>
+<hr>
+*Areas of concentration must fulfill:<br>
++background requirement: 4401 & 4501 if not already taken for
+B.S.<br>
++breadth requirement: three 6000-level courses from three
+different concentration areas<br>
++depth requirement: three courses (at least two 6000-level) from
+one concentration area different from the breadth areas chosen<br><br>
+Areas of concentration:<br>
+1. Theoretical Computer Science and Programming Languages<br>
+2. Systems and Networks<br>
+3. Information Assurance<br>
+4. Software Systems<br>
+5. Database Systems and Distributed Application<br>
+6. Computer Graphics and Visual Computing<br>
+7. Artificial Intelligence<br><br>
+Consult the department website for the current list of courses offered and their
+corresponding areas.<br>
+<br>
+
+Graduate Checklist / Advising Form (NON-THESIS OPTION)<br><br>
+
+Note: At most <b>4</b> 4000 level courses count towards the
+degree requirement.<br><br>
+
+Note: The following 6000-level courses DO NOT count
+towards the degree requirements: CSCI 6001<br><br>
+
+
+Must take <b>Master's comprehensive examination</b> in three courses that count towards the degree requirements subject to approval (<b>at most one</b> may be a 4000-level course).
+<b>Two written</b> and <b>one oral</b> exam are required. Oral exam must be taken as the last exam. Comprehensive exams can only be taken <b>AFTER 24 credit hours</b> have been collected
+that count towards the degree requirements. Oral exam must be taken in the semester in which the student graduates.
+<hr>
+*Areas of concentration must fulfill:<br>
++background requirement: 4401 & 4501 if not already taken for B.S., for
+credit;<br>
++breadth requirement: three 6000-level courses from three different
+concentration areas; and<br>
++depth requirement: three courses (at least two 6000-level) from one
+concentration area different from the breadth areas chosen.<br>
+<br>
+Areas of concentration:<br>
+1. Theoretical Computer Science and Programming Languages<br>
+2. Systems and Networks<br>
+3. Information Assurance<br>
+4. Software Systems<br>
+5. Database Systems and Distributed Applications<br>
+6. Computer Graphics and Visual Computing<br>
+7. Artificial Intelligence<br>
+Consult the departmental website for the current list of courses offered and their corresponding areas.<br><br>
+
+
