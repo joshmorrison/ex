@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :level %><br />
-    <%= f.text_field :level %>
+    <%= select :course, :level, options_for_select(Course::LEVELS) %>
   </p>
   <p>
     <%= f.label :title %><br />

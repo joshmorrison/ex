@@ -8,23 +8,15 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
  
+#authenticate user
   def authenticate
 	unless @logged_user
 			#not logged in
     		authenticate_or_request_with_http_basic do |user_name, password|
-      	user_name == 'admin' && password == 'passwurd'
-				#:accessLevel = User.find_by
+      	user_name == 'admin' && password == 'password'
 			return false
     	end
   	end
-	end
-
-	def fetch_logged_user
-
-		unless session[:user_id].blank?
-			@logged_user = User.find(session[:user_id])
-		end
-		rescue ActiveRecord::RecordNotFound
 	end
 
   # Scrub sensitive parameters from your log

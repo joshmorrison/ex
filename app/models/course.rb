@@ -8,5 +8,8 @@ validates_length_of :description, :within => 1..500
 
 validates_format_of :courseCode, :with => /[4-6][0-9]{3}/, :message => "Invalid Course Code"
 validates_format_of :level, :with => /[GU]/, :message => "Only G or U allowed"
+
+LEVELS = ["G", "U"]
+
 end
 #
