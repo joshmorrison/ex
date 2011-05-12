@@ -8,7 +8,6 @@ validates_length_of :active, :maximum => 1
 validates_length_of :userType, :within => 3..7 
 validates_length_of :password, :within => 4..20 
 
-
 #validates_format_of :userID, :with =>
 validates_format_of :lastname, :firstname, :with => /\A[a-zA-Z]+\z/, :message => "Only letters allowed"
 validates_format_of :active, :with => /[YN]/

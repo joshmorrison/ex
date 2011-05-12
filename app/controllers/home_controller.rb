@@ -3,4 +3,5 @@ class HomeController < ApplicationController
 	@courses = Course.all
   end
 
+	
 end
