@@ -1,0 +1,6 @@
+CREATE TABLE "checklists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "studentID" varchar(255), "courseCode" varchar(255), "year" varchar(255), "semester" varchar(255), "area" varchar(255), "count" varchar(255), "grade" varchar(255), "approved" varchar(255), "note" text, "created_at" datetime, "updated_at" datetime);
+CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "courseCode" varchar(255), "level" varchar(255), "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime);
+CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL);
+CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userID" varchar(255), "lastname" varchar(255), "firstname" varchar(255), "active" varchar(255), "userType" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");
+INSERT INTO schema_migrations (version) VALUES ('20110503034310');

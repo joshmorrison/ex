@@ -18,4 +18,17 @@ validates_format_of :userType, :with => /Student|FAC|Admin/, :message => "Error:
 	ACTIVES = ["Y", "N"]
 	USERTYPES = 	["Student", "FAC", "Admin"]
 
+
+
+
+	def self.authenticate(userID, password)
+		user = find_by_userID(userID)
+		if user && user.userID == userID && user.password == password
+			true
+		else
+			false
+		end
+	end
+
+
 end

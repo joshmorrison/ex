@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  userID: 
-  lastname: 
-  firstname: 
-  active: 
-  userType: 
-  password: MyString
+  userID: 1234567
+  lastname: Barker
+  firstname: Bob
+  active: Y
+  userType: Student
+  password: password
 
 two:
-  userID: 
-  lastname: 
-  firstname: 
-  active: 
-  userType: 
-  password: MyString
+  userID: 2345678
+  lastname: Child
+  firstname: Julia
+  active: N
+  userType: FAC
+  password: password
