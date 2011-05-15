@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110503034310) do
+ActiveRecord::Schema.define(:version => 20110514025048) do
 
   create_table "checklists", :force => true do |t|
     t.string   "studentID"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110503034310) do
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "courses", :force => true do |t|

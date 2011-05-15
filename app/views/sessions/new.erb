@@ -1,3 +1,6 @@
+ 
+<h2>Please Log In or Sign Up</h2> 
+
 <% form_tag sessions_path do %>
 	<p> 
 		<%= label_tag :userID %><br />
@@ -10,3 +13,4 @@
 	<p class="button"><%= submit_tag "Login" %>
 <% end %>
 
+<%= link_to "sign up", new_user_path %>

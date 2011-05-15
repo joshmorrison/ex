@@ -13,12 +13,12 @@ validates_format_of :lastname, :firstname, :with => /\A[a-zA-Z]+\z/, :message =>
 validates_format_of :active, :with => /[YN]/
 validates_format_of :userType, :with => /Student|FAC|Admin/, :message => "Error: bad user type; must be Student, FAC, or Admin"
 
+  has_many :checklists
+
 ## !!BANGBANG
 	
 	ACTIVES = ["Y", "N"]
 	USERTYPES = 	["Student", "FAC", "Admin"]
-
-
 
 
 	def self.authenticate(userID, password)

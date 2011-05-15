@@ -6,10 +6,46 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+h1 {
+	background-color: #000033;
+	color: #ffffff;
+	height: 80px;
+	width: 800px;
+	line-height: 50px;
+	padding: 25px;
+	
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
+}
+
+table {
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#000033;
+color:#ffffff;
+}
+
+table a:link, table a:visited, table a:active {
+  color: #EBECE4;
+  text-decoration: none;
+}
+
+table a:hover {
+  color: #06c;
+	background-color:#000033;
+  text-decoration: none;
+}
+
+#customers tr.alt td 
+{
+color:#000000;
+background-color:#EAF2D3;
 }
 
 a { color: #000; }
@@ -51,4 +87,9 @@ a:hover { color: #fff; background-color:#000; }
   font-size: 12px;
   list-style: square;
 }
+
+img {
+	margin-left:550px;	
+}
+
 

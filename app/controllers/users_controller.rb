@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
-  def index
+  
+  before_filter :logged_in?, :except => [:new, :create] 
+
+   def index
     @users = User.all
 
     respond_to do |format|

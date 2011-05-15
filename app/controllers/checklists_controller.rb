@@ -1,9 +1,16 @@
 class ChecklistsController < ApplicationController
+  
+before_filter :logged_in?
+
   # GET /checklists
   # GET /checklists.xml
   def index
-    @checklists = Checklist.all
-
+     
+    if User.find_by_userID(session[:userID]).userType == "Student"      
+      @checklists = User.find_by_userID(session[:userID]).checklists
+    else    
+      @checklists = Checklist.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @checklists }
@@ -25,6 +32,7 @@ class ChecklistsController < ApplicationController
   # GET /checklists/new.xml
   def new
     @checklist = Checklist.new
+    @studentID = session[:userID]
 
     respond_to do |format|
       format.html # new.html.erb

@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
  
+before_filter :logged_in?
+
   # GET /courses
   # GET /courses.xml
   def index

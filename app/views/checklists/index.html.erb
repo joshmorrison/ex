@@ -1,4 +1,8 @@
-<h1>Checklists:</h1>
+
+<%= link_to 'add course', new_checklist_path %>
+<h2>Checklist for <%= User.find_by_userID(session[:userID]).firstname %> 
+                  <%= User.find_by_userID(session[:userID]).lastname %>
+</h2>
 
 <table>
   <tr>
@@ -33,4 +37,4 @@
 
 <br />
 
-<%= link_to 'New checklist', new_checklist_path %>
+

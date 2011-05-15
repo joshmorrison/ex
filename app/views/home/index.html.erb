@@ -1,17 +1,7 @@
-<HTML>
-<BODY>
-<BODY>
-<BR>
 
-<h1>Log in!</h1>
-
-
-
-<%= link_to "Sign up!", users_path %> 
-<%= link_to "Checklists", checklists_path %> 
+<%= link_to "Users", users_path %> 
 <%= link_to "Courses", courses_path %> 
-<BR><BR>
+<%= which_checklist %> 
 
-</BODY>
-</HTML>
+<h2>Welcome <%= User.find_by_userID(session[:userID]).firstname %>!</h2>  
 

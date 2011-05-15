@@ -1,11 +1,11 @@
-<h1>New checklist</h1>
+<h2>Add Course to Checklist</h2>
 
 <% form_for(@checklist) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :studentID %><br />
-    <%= f.text_field :studentID %>
+    <%= f.text_field :studentID, :value => @studentID %>
   </p>
   <p>
     <%= f.label :courseCode %><br />
@@ -40,6 +40,7 @@
     <%= f.text_area :note %>
   </p>
   <p>
+    <%= f.hidden_field :user_id, :value => User.find_by_userID(session[:userID]).id %>
     <%= f.submit 'Create' %>
   </p>
 <% end %>
