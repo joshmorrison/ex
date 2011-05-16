@@ -1,3 +1,12 @@
+$ rake db:migrate
+...
+$ rake db:test:load
+rake db:test:prepare
+rake db:test:purge
+
+$ cd test
+$ ruby -Itest unit/post_test.rb
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 

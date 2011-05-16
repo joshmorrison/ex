@@ -17,7 +17,7 @@ def which_checklist
     if User.find_by_userID(session[:userID]) && User.find_by_userID(session[:userID]).userType =~ /Admin|FAC/
       link_to "User", :controller => "users", :action => "index"
   else User.find_by_userID(session[:userID])
-    link_to "User", :controller => "users", :action => "show", :id => User.find_by_userID(session[:userID])
+    link_to "User", :controller => "users", :action => "index", :id => User.find_by_userID(session[:userID])
 end
 end
   

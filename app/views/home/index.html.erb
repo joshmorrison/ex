@@ -1,7 +1,8 @@
-
+<% if User.find_by_userID(session[:userID]).userType != "Student" %>
 <%= link_to "Users", users_path %> 
+<% end %>
+
 <%= link_to "Courses", courses_path %> 
 <%= which_checklist %> 
 
-<h2>Welcome <%= User.find_by_userID(session[:userID]).firstname %>!</h2>  
-
+<h2>Welcome <%= User.find_by_userID(session[:userID]).firstname %>!</h2>

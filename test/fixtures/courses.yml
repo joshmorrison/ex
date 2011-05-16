@@ -1,13 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  courseCode: MyString
-  level: MyString
-  title: MyString
-  description: MyText
+  courseCode: 4567
+  level: U
+  title: Undergrad Course 1
+  description: A class for intro computation
 
 two:
-  courseCode: MyString
-  level: MyString
-  title: MyString
-  description: MyText
+  courseCode: 4321
+  level: U
+  title: Undergrad Course 2
+  description: Another class for intro computation
+
+three:
+  courseCode: 6789
+  level: G
+  title: Graduate Course 1
+  description: Another class for intro computation but for grads

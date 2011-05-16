@@ -1,12 +1,7 @@
-
+  <% if User.find_by_userID(session[:userID]).userType != "Student" %>
+  <%= link_to 'new course', new_course_path %> 
+  <% end %>
 <h2>View Courses</h2>
-
-  
-  <%= link_to 'New course', new_course_path %>
-
-<br />
-<h2>All Courses</h2>
-<br />
 
 <table>
   <tr>

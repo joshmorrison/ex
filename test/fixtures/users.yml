@@ -2,16 +2,24 @@
 
 one:
   userID: 1234567
-  lastname: Barker
-  firstname: Bob
+  lastname: One
+  firstname: Student
   active: Y
   userType: Student
   password: password
 
 two:
   userID: 2345678
-  lastname: Child
-  firstname: Julia
+  lastname: Two
+  firstname: Faculty
   active: N
   userType: FAC
+  password: password
+
+three:
+  userID: 3456789
+  lastname: Three
+  firstname: Administrator
+  active: N
+  userType: Admin
   password: password
